@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+    color: green
+}
+
+/*this container includes our table and canvass*/
+.center-container {
+    /*this property sets the width of our container*/
+    width: 608px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+table {
+    /* this collapses table border inro 1 border*/
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+td {
+    /*this property changes the curser*/
+    cursor: pointer;
+    border: 4px solid rgba(40, 116, 6, 0.8);
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+    filter: contrast(3);
+}
+
+canvas {
+    /*this sets position of our canvas to top left*/
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
