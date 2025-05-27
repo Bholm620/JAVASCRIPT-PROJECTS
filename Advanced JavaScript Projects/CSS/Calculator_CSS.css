@@ -84,3 +84,7 @@ button:hover {
     gap: 10px;
     padding: 20px;
 }
+
+.equal-sign:hover{
+    background-color: darkblue;
+}

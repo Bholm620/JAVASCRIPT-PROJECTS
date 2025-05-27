@@ -64,29 +64,47 @@ function Calculator_Reset() {
 }
 
 //updates calculator
-function Update_Display() {
-    const keys = document.querySelector('.calculator-keys');
-    keys.addEventListener('click', (event) => {
-        const { target } = event;
-        if (!target.matches('button')) {
-            return;
-        }
-        if (target.classList.contains('operator')) {
-            Handle_Operator(target.value);
-            Update_Display();
-            return;
-        }
-        if (target.classList.contains('decimal')) {
-            Input_decimal(target.value);
-            Update_Display();
-            return;
-        }
+
         //ensures AC clears all input
         if (target.classList.contains('all-clear')) {
             Calculator_Reset();
             Update_Display();
             return;
         }
-        Input_Digit(target.value);
+    Input_Digit(target.value);
+    Update_Display();
+
+    function Update_Display() {
+    const display = document.querySelector('.calculator-screen');
+    display.value = Calculator.Display_Value;
+
+    Update_Display();
+
+const keys = document.querySelector('.calculator-keys');
+keys.addEventListener('click', (event) => {
+    const { target } = event;
+    if (!target.matches('button')) {
+        return;
+    }
+    if (target.classList.contains('operator')) {
+        Handle_Operator(target.value);
         Update_Display();
-    })}
+        return;
+    }
+    if (target.classList.contains('decimal')) {
+        Input_decimal(target.value);
+        Update_Display();
+        return;
+    }
+    //ensures AC clears all input
+    if (target.classList.contains('all-clear')) {
+        Calculator_Reset();
+        Update_Display();
+        return;
+    }
+    Input_Digit(target.value);
+    Update_Display();
+})
+
+}
+
