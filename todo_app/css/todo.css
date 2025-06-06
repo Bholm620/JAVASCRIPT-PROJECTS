@@ -1,0 +1,60 @@
+html {
+    font-family: "Avenir Next", Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input {
+    padding-top: 30px;
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+li {
+    text-align: left;
+    font-size: 40px;
+    list-style: none;
+    margin: 0;
+}
+
+.todo-container {
+  display: grid;
+  place-items: center; /* Centers horizontally and vertically */
+  height: 100vh; /* Optional: Sets parent height to viewport height */
+}
+
+.footer {
+  background-color: #f0f0f0; /* Example: Light gray background */
+  color: #333;               /* Example: Dark text color */
+  text-align: center;        /* Example: Center the text in the footer */
+  border-top: 1px solid #1eaa4d;/* Example: Add a border at the top of the footer */
+  padding: 20px;            /* Example: Add some padding inside the footer */
+  position: relative;        /* Required for flexbox alignment */
+}
+
+body {
+       display: flex;
+       flex-direction: column;
+       min-height: 100vh;
+   }
+   .main {
+       flex: 1; /* Let the main content take all available space */
+   }
+   footer {
+       /* Footer styles here, including border */
+       margin-top: auto; /*  Pushes the footer to the bottom */
+   }
+
+   .remove {
+    padding-bottom: 5px; 
+   }
